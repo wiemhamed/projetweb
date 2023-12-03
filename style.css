@@ -1,0 +1,183 @@
+/*ay haja fyha .w mb3dha ktiba hadhyka class deja 3amlin leha delcaration fy html class tnajem ta5dem byha barcha marrat par contre id ta5dem byha marra wa7da*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,900');  /* hadhy importena librairie bch najemna naktbou bel font hadha "poppins" */
+/* etoile hadhy m3ntha 5dma mta3 css 3la page web kemla*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* hadhy pour determiner largeur w hauteur mta3 element html */
+    font-family: 'poppins',sans-serif; /* hadhy police mta3 lektiba */
+}
+/* 5edma css 3al balise body*/
+body{
+    overflow: hidden;
+}
+/*hadhy class barka*/
+.container{
+    width: 100%;
+    min-height: 100vh; /* hadhy minimun hauteur*/
+    background-color: rgb(172, 247, 247); /* coleur  ta3 arriere plan hadhy*/
+}
+/* 5edma css 3al balise nav*/
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
+/*hadhy class + balise li f west class hadhyka*/
+.logo a{
+    display: flex;
+    font-size: 40px;/* taille mta3 texte hadhy */
+    font-weight: 800; /*hadhy wazn mta3 texte mn rgiga 7ata lin twalli 5chyna bch t3mlha rgiga ta3ml par exemple 100*/
+    color: #0004ff; /*hadhy couleur mta3 texte*/
+    letter-spacing: 3px;/* hadhy no9sdou beha espacement ma byn el7orouf*/
+    cursor: pointer;
+    text-transform: uppercase;/*hadhy ktiba bch n7awlouha lel majuscule*/
+}
+.navItems{
+    display: flex;
+}
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+.navItems li a{
+    font-size: 25px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;/*exemple : "wiem hamed" bech twalli hekka kif na3mlou capitalize --> "Wiem Hamed"*/
+}
+.navItems li:hover a{
+    color: #0004ff;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+.wrapper::before{
+    position: absolute;
+    content: ' ';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg,#0004ff,rgb(192, 253, 255));
+    animation: object1 6s linear infinite;
+}
+.wrapper::after{
+    position: absolute;
+    content: ' ';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%; /*hadhy bech ta3ml byha les angles ta3 hajet mdawra*/
+    left: 35%; /*positionement mta3 7aja mdwra li sna3tha mn cote horizontale */
+    top: 12%;/*positionement mta3 7aja mdwra li sna3tha mn cote verticale */
+    background: linear-gradient(45deg,#0004ff,rgb(192, 253, 255));
+    animation: object2 6s linear infinite;
+}
+
+/* hadhy w lmb3dha 5admin byha animation mta3 les cercles*/
+@keyframes object1 {
+    50%{
+        left: -13%;
+        top: 41%;
+    }
+    
+}
+@keyframes object2 {
+    50%{
+        left: 35%;
+        top: 10%;
+    }
+    
+}
+.cols{
+    width: 50%;
+}
+.cols0{
+    width: 60%;
+    z-index: 5;
+}
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d353f;
+}
+.topline::after{
+    position: absolute;
+    content: ' ';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #0004ff;
+}
+/* 5edma css 3al balise h1 elly hya titre b akber grandeur*/
+h1{
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+    color: #3d353f;
+}
+.multiText{
+    color: #0004ff;
+    text-transform: capitalize;
+}
+/* 5edma css 3al balise p elly hya paragraphe f html*/
+p{
+    display: block;/*type affichage element html*/
+    width: 90%;
+    font-size: 1.2em;
+    color:#3d353f;
+}
+.imgbox img{
+    position: relative;
+    height: 25%;/*hadhy hauteur bel français*/
+    width: calc(75% - 80px);
+    top: 80px;
+    right: 50px;
+    transform: rotateY(180deg);
+    animation: animateUser 4s linear infinite;
+}
+/* hadhy 5admin byha animation mta3 les photos*/
+@keyframes animateUser {
+    50%{
+        right: 30px;
+        top: -50px;
+    }
+}
+
+.btns{
+    width: 100%;/*hadhy dimension elly hya bel français largeur*/
+    position: relative;
+    left: 150px;
+}
+/* 5edma css 3al balise button*/
+button{
+    outline: none;
+    border: none;/*hadhy bordure*/
+    cursor: pointer; /*hadhy type mta3 curseur wa9t li n7otou curseur mta3 souris fi lblasa li hajetna byha kima button par exemple*/
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #3d353f;
+    padding: 8px 14px;/*hadhom aham hajtyn f dev web taw na3tyk photo bch tfaserlek */
+    margin: 40px 5px;/*hadhom aham hajtyn f dev web taw na3tyk photo bch tfaserlek */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0,0,0,0.4);/*hadhy no9sed byha shadow mta3 button shadow bel anglais m3ntha dhel*/
+}
+button:hover{
+    background-color: #0004ff;
+}
